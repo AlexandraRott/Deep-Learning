@@ -1,0 +1,209 @@
+body {    
+    font-family: Helvetica;
+    background-color: #f2f4f7;
+}
+
+/* Оформление меню */
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    height: 50px;
+}
+
+nav ul li {
+    display: flex; /* Делаем его флекс-контейнером */
+    justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+    height: 100%;
+}
+
+nav ul li a {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav li:hover{
+    background-color: rgb(91, 91, 91);
+}
+
+/* Стиль для основного контента */
+main {
+    padding: 20px;
+    width: 90%;
+    align-content: center;
+}
+
+/* Добавьте стили по вашему вкусу */
+
+.example-container {
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 300px;
+    margin: 10px;
+}
+
+.example-image {
+    margin: 0 ;
+    position: relative;
+    transition: opacity 0.3s;
+}
+
+/*
+.example-image:hover {
+    opacity: 0.6;
+}
+
+*/
+
+.example-container button {
+    width: 300px;
+    height: 50px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.example-container button:hover {
+    background-color: #0056a4;
+}
+
+.upload-container {
+    width: 100%;
+    text-align: center;
+
+}
+
+.upload-form {
+    width: 100%;
+    display: inline-block;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px; /* Закругление для кнопки "Classify" */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056a4;
+}
+
+img {    
+    border-radius: 8px; /* Закругление для кнопки "Classify" */
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Стили для кастомной кнопки, которая заменяет стандартную кнопку выбора файла */
+.custom-file-input { 
+    width: 300px;
+    height: 50px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 17px 120px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px; /* Закругление для кнопки "Classify" */
+}
+
+.custom-file-input:hover {
+    background-color: #0056a4;
+}
+
+.row-container {
+    width: 100%;
+    display: flex; /* Делаем его флекс-контейнером */
+    justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+    align-items: center; /* Выравниваем элементы по вертикали по центру */
+}
+
+.any-content {
+    width: 100%;
+    display: flex; /* Делаем его флекс-контейнером */
+    justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+    align-content: center;
+
+}
+
+.any-content ul {
+    width: 80%; 
+    list-style-position: inside;
+    color: #000000;
+    list-style: none;
+    margin-top: 0;
+    padding-left: 50px;
+    width: 100%;
+    align-content: center;
+}
+
+.any-content li {
+    padding-left: 175px;
+    padding-right: 175px;
+    padding-top: 25px;
+    
+}
+
+.any-content a {
+    color: #000000;
+}
+
+.any-content a:hover {
+    color: #0056a4;
+}
+
+.result-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.result-content {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #0074d9; /* Цвет рамки */
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+}
+
+.result-content p {
+    margin: 0;
+}
+
+.analysis-result {
+    height: 20px;
+}
+

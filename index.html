@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="examples">Example images</a></li>
+                <li><a href="#" id="upload">Upload image</a></li>
+                <li><a href="#" id="documentation">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="examplesContent" style="display: none;" class="examples-Content">
+
+            <h2>Examples</h2>
+            <div class="example-container">
+                <img class="example-image" src="images/example.jpg">
+                <button class="analyze-button">Classify</button>
+            </div>
+
+        </div>
+        <div id="uploadForm" class="upload-container">
+            <h2>Upload your image</h2>
+            <br>
+            <form enctype="multipart/form-data" action="/upload" method="post" id="uploadImageForm" class="upload-form">
+                <input type="file" name="file" accept="image/*" required id="fileInput" style="display: none;">
+                <label for="fileInput" class="custom-file-input">Browse</label>
+                <br><br>
+
+            </form>
+        </div>
+        <div id="uploadedImage" style="display: none; text-align: center;">
+            <h2>Uploaded image</h2>
+            <img id="imagePreview" src="" alt="Uploaded image"><br>
+            <button id="analyzeButton">Classify</button>
+            <p id="analysisResult" class="analysis-result"></p>
+        </div>
+
+        <div id="documentationContent" style="display: none">
+            <h2>Documentation</h2>
+            <div class="any-content">
+                <ul>
+                    <li>
+                        <h3>Interaction</h3>
+                        <p>Upon launching the application, the ml5 model is loaded, setting 
+                        the stage for user interaction. You'll find six initial images displayed, 
+                        serving as practical examples. Each of these images can be easily classified 
+                        by clicking the "CLASSIFY" button.</p>
+                        <p></p>Following the classification process, users receive clear details about the 
+                        top match and its confidence level, providing valuable insights into the system's analysis.</p>
+                        <p>For a more tailored experience, users can opt to upload their own images by clicking 
+                        the "Upload image" option in the top bar. After uploading and classifying the image, 
+                        the system once again provides information about the best match and its confidence level, 
+                        ensuring a personalized and informative user journey.</p>
+                    </li>
+                    <li>
+                        <h3>Frameworks</h3>
+                        <p><b>Node.js</b> Node.js is a server-side JavaScript runtime environment based on the V8 
+                        JavaScript engine from Google Chrome. It allows the development of high-performance and 
+                        scalable network applications due to its non-blocking I/O architecture. Node.js is particularly 
+                        suitable for data-intensive and real-time applications. Developers often utilize Node.js for 
+                        creating web applications, APIs, and microservices.</p>
+                        <p><b>Express.js</b> Express.js is a lightweight and flexible web application framework for Node.js. 
+                        It is based on simple routing and middleware concepts and provides a robust set of features for 
+                        developing web and mobile applications. Its modular architecture enables developers to quickly 
+                        create APIs and RESTful services. The framework also supports a variety of plugins that facilitate 
+                        the development of Node.js applications.</p>
+                        <p><b>Multer</b> Multer is middleware for Express.js, specializing in handling file uploads in web 
+                        applications. With Multer, users can send files from client-side forms to the server and process 
+                        them efficiently. It offers features such as file type validation and the ability to change file 
+                        names. Multer simplifies secure file management on the server and seamlessly integrates into Express.js 
+                        applications.</p>
+                        <p><b>ml5.js</b> ml5.js is a JavaScript library for machine learning built on top of TensorFlow.js. 
+                        It provides developers with easy access to machine learning algorithms without requiring extensive 
+                        knowledge in the machine learning field. ml5.js offers pre-trained models for various tasks such as 
+                        image recognition, text analysis, and speech generation. Developers can integrate these models directly 
+                        into web applications or train and implement custom models. The library is frequently used in the 
+                        development of interactive creative applications and experiments in the field of artificial intelligence.</p>
+
+
+                    </li>
+                    <li>
+                        <h3>Implementation</h3>
+                    </li>
+                    <li>
+                        <h3>Media sources</h3>
+                        <p>All images belong to <a href="https://unsplash.com">https://unsplash.com</a></p>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
