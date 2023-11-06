@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 const storage = multer.memoryStorage(); // Меняем на memoryStorage для обработки в памяти
 const upload = multer({ storage: storage });
 
-app.use(express.static(path.join(__dirname, '../images')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {
     console.log('Received a request for the homepage'); // Логирование информационного сообщения
@@ -26,7 +26,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
             .toBuffer();
 
         const imageName = `upload/${req.file.originalname}`;
-        await sharp(resizedImage).toFile(path.join(__dirname, '../', imageName));
+        await sharp(resizedImage).toFile(path.join(__dirname, '../public', imageName));
 
         res.send(imageName);
     } catch (error) {
