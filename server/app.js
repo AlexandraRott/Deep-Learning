@@ -3,7 +3,9 @@ const multer = require('multer');
 const path = require('path');
 const sharp = require('sharp'); // Подключаем библиотеку sharp
 const app = express();
-const port = 3000;
+
+// Установите желаемый порт
+const port = process.env.PORT || 3000;
 
 // Настройка папки для загрузки изображений
 const storage = multer.memoryStorage(); // Меняем на memoryStorage для обработки в памяти
@@ -36,4 +38,3 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 app.listen(port, () => {
     console.log(`Server runs on port: ${port}`); // Логирование информационного сообщения
 });
-
