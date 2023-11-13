@@ -16,6 +16,7 @@
             <ul>
                 <li><a href="#" id="examples">Example images</a></li>
                 <li><a href="#" id="upload">Upload image</a></li>
+                <li><a href="#" id="regression">Regression</a></li>
                 <li><a href="#" id="documentation">Documentation</a></li>
             </ul>
         </nav>
@@ -47,46 +48,74 @@
             <p id="analysisResult" class="analysis-result"></p>
         </div>
 
+        <div id="regressionContent" class="regression-content" style="display: none;">
+            <h2>Regression</h2>
+            <div class="regression-content-container">
+                <div id="regressionChart" class="regression-chart"></div>
+                <div id="regressionInputs" class="regression-inputs">
+                    <div><label>a: </label><input type="number" id="inputA" placeholder="a" value="1">
+                    <label>b: </label><input type="number" id="inputB" placeholder="b" value="0"></div>
+                    <button id="updateRegression">Update</button>
+                </div>
+            </div>
+        </div>     
+
+
         <div id="documentationContent" style="display: none">
             <h2>Documentation</h2>
             <div class="any-content">
                 <ul>
                     <li>
                         <h3>Interaction</h3>
-                        <p>Upon launching the application, the ml5 model is loaded, setting 
-                        the stage for user interaction. You'll find six initial images displayed, 
-                        serving as practical examples. Each of these images can be easily classified 
-                        by clicking the "CLASSIFY" button.</p>
-                        <p></p>Following the classification process, users receive clear details about the 
+                        <p>Upon launching the application, the ml5 model is loaded, setting
+                            the stage for user interaction. You'll find six initial images displayed,
+                            serving as practical examples. Each of these images can be easily classified
+                            by clicking the "CLASSIFY" button.</p>
+                        <p></p>Following the classification process, users receive clear details about the
                         top match and its confidence level, providing valuable insights into the system's analysis.</p>
-                        <p>For a more tailored experience, users can opt to upload their own images by clicking 
-                        the "Upload image" option in the top bar. After uploading and classifying the image, 
-                        the system once again provides information about the best match and its confidence level, 
-                        ensuring a personalized and informative user journey.</p>
+                        <p>For a more tailored experience, users can opt to upload their own images by clicking
+                            the "Upload image" option in the top bar. After uploading and classifying the image,
+                            the system once again provides information about the best match and its confidence level,
+                            ensuring a personalized and informative user journey.</p>
                     </li>
                     <li>
                         <h3>Frameworks</h3>
-                        <p><b>Node.js</b> Node.js is a server-side JavaScript runtime environment based on the V8 
-                        JavaScript engine from Google Chrome. It allows the development of high-performance and 
-                        scalable network applications due to its non-blocking I/O architecture. Node.js is particularly 
-                        suitable for data-intensive and real-time applications. Developers often utilize Node.js for 
-                        creating web applications, APIs, and microservices.</p>
-                        <p><b>Express.js</b> Express.js is a lightweight and flexible web application framework for Node.js. 
-                        It is based on simple routing and middleware concepts and provides a robust set of features for 
-                        developing web and mobile applications. Its modular architecture enables developers to quickly 
-                        create APIs and RESTful services. The framework also supports a variety of plugins that facilitate 
-                        the development of Node.js applications.</p>
-                        <p><b>Multer</b> Multer is middleware for Express.js, specializing in handling file uploads in web 
-                        applications. With Multer, users can send files from client-side forms to the server and process 
-                        them efficiently. It offers features such as file type validation and the ability to change file 
-                        names. Multer simplifies secure file management on the server and seamlessly integrates into Express.js 
-                        applications.</p>
-                        <p><b>ml5.js</b> ml5.js is a JavaScript library for machine learning built on top of TensorFlow.js. 
-                        It provides developers with easy access to machine learning algorithms without requiring extensive 
-                        knowledge in the machine learning field. ml5.js offers pre-trained models for various tasks such as 
-                        image recognition, text analysis, and speech generation. Developers can integrate these models directly 
-                        into web applications or train and implement custom models. The library is frequently used in the 
-                        development of interactive creative applications and experiments in the field of artificial intelligence.</p>
+                        <p><b>Node.js</b> Node.js is a server-side JavaScript runtime environment based on the V8
+                            JavaScript engine from Google Chrome. It allows the development of high-performance and
+                            scalable network applications due to its non-blocking I/O architecture. Node.js is
+                            particularly
+                            suitable for data-intensive and real-time applications. Developers often utilize Node.js for
+                            creating web applications, APIs, and microservices.</p>
+                        <p><b>Express.js</b> Express.js is a lightweight and flexible web application framework for
+                            Node.js.
+                            It is based on simple routing and middleware concepts and provides a robust set of features
+                            for
+                            developing web and mobile applications. Its modular architecture enables developers to
+                            quickly
+                            create APIs and RESTful services. The framework also supports a variety of plugins that
+                            facilitate
+                            the development of Node.js applications.</p>
+                        <p><b>Multer</b> Multer is middleware for Express.js, specializing in handling file uploads in
+                            web
+                            applications. With Multer, users can send files from client-side forms to the server and
+                            process
+                            them efficiently. It offers features such as file type validation and the ability to change
+                            file
+                            names. Multer simplifies secure file management on the server and seamlessly integrates into
+                            Express.js
+                            applications.</p>
+                        <p><b>ml5.js</b> ml5.js is a JavaScript library for machine learning built on top of
+                            TensorFlow.js.
+                            It provides developers with easy access to machine learning algorithms without requiring
+                            extensive
+                            knowledge in the machine learning field. ml5.js offers pre-trained models for various tasks
+                            such as
+                            image recognition, text analysis, and speech generation. Developers can integrate these
+                            models directly
+                            into web applications or train and implement custom models. The library is frequently used
+                            in the
+                            development of interactive creative applications and experiments in the field of artificial
+                            intelligence.</p>
 
 
                     </li>
@@ -96,15 +125,18 @@
                     <li>
                         <h3>Media sources</h3>
                         <p>All images belong to <a href="https://unsplash.com">https://unsplash.com</a></p>
-                        
+
                     </li>
-                    
+
                 </ul>
             </div>
 
         </div>
     </main>
     <script src="/scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+
 </body>
 
 </html>

@@ -7,6 +7,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -26,8 +27,12 @@ nav ul li {
 nav ul li a {
     margin-right: 20px;
     margin-left: 20px;
+    height: 100%;
     text-decoration: none;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav li:hover{
@@ -163,9 +168,9 @@ input[type="file"] {
 }
 
 .any-content li {
-    padding-left: 175px;
-    padding-right: 175px;
-    padding-top: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
     
 }
 
@@ -204,6 +209,50 @@ input[type="file"] {
 }
 
 .analysis-result {
-    height: 20px;
+    height: 25px;
+}
+
+
+/* Стили для контейнера графика и полей ввода */
+.regression-content-container {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.regression-chart {
+    flex: 1;
+}
+
+.regression-inputs {
+    width: 200px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление столбцом */
+}
+
+/* Стили для полей ввода */
+.regression-inputs input[type="number"] {
+    width: 50px;
+    margin-bottom: 10px; /* Отступ снизу между полями ввода */
+}
+
+/* Стили для кнопки */
+.regression-inputs button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input {
+    border: 3px solid #0074d9; /* Цвет рамки */
+    border-radius: 5px;
+    width: 10px;
+    height: 25px;
+    font-family: Helvetica;
 }
 
