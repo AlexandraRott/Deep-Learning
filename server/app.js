@@ -4,17 +4,17 @@ const path = require('path');
 const sharp = require('sharp');
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3004;
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', (req, res) => {
-    console.log('Received a request for the homepage');
-    res.sendFile(path.join(__dirname, '../index.html'));
-});
+// app.get('/', (req, res) => {
+//     console.log('Received a request for the homepage');
+//     res.sendFile(path.join(__dirname, '../public/index.html'));
+// });
 
 app.post('/upload', upload.single('file'), async (req, res) => {
     try {
