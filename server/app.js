@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
  app.get('/', (req, res) => {
      console.log('Received a request for the homepage');
-     res.sendFile(path.join(__dirname, '../public/index.html'));
+     res.sendFile(path.join(__dirname, '../index.html'));
  });
 
 app.post('/upload', upload.single('file'), async (req, res) => {
