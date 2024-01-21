@@ -1,3 +1,17 @@
 [build]
-  command = "npm run build"
-  publish = "."  # Укажите папку, в которой находятся файлы для развёртывания
+  publish = "public"
+  functions = "server"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[headers]
+  "/*" = [
+    "Cache-Control: max-age=300",
+    "Content-Security-Policy: default-src 'self'",
+    "X-Content-Type-Options: nosniff",
+    "X-Frame-Options: DENY",
+    "X-Netlify-Resource-Hash: <your-netlify-resource-hash>"
+  ]

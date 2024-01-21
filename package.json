@@ -79,6 +79,8 @@
     "multer": "^1.4.5-lts.1",
     "napi-build-utils": "^1.0.2",
     "negotiator": "^0.6.3",
+    "netlify-cli": "^17.15.1",
+    "netlify-lambda": "^2.0.16",
     "node-abi": "^3.51.0",
     "node-addon-api": "^6.1.0",
     "object-assign": "^4.1.1",
@@ -102,6 +104,7 @@
     "semver": "^7.5.4",
     "send": "^0.18.0",
     "serve-static": "^1.15.0",
+    "serverless-http": "^3.2.0",
     "set-function-length": "^1.1.1",
     "setprototypeof": "^1.2.0",
     "sharp": "^0.32.6",
@@ -130,9 +133,7 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "build": "rimraf dist && npm run clean && npm run compile",
-    "clean": "cross-env rimraf dist",
-    "compile": "babel . -d dist"
+    "build": "netlify deploy --prod"
   },
   "repository": {
     "type": "git",
