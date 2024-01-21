@@ -129,7 +129,10 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "build": "npm run clean && npm run compile",
+    "clean": "cross-env rimraf dist",
+    "compile": "babel src -d dist"
   },
   "repository": {
     "type": "git",
@@ -140,5 +143,8 @@
   "bugs": {
     "url": "https://github.com/AlexandraRott/Deep-Learning/issues"
   },
-  "homepage": "https://github.com/AlexandraRott/Deep-Learning#readme"
+  "homepage": "https://github.com/AlexandraRott/Deep-Learning#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
