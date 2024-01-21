@@ -130,9 +130,9 @@
   },
   "scripts": {
     "start": "node server/app.js",
-    "build": "npm run clean && npm run compile",
+    "build": "rimraf dist && npm run clean && npm run compile",
     "clean": "cross-env rimraf dist",
-    "compile": "babel src -d dist"
+    "compile": "babel . -d dist"
   },
   "repository": {
     "type": "git",
@@ -145,6 +145,10 @@
   },
   "homepage": "https://github.com/AlexandraRott/Deep-Learning#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "cross-env": "^7.0.3",
+    "rimraf": "^5.0.5"
   }
 }
