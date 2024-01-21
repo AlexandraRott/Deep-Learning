@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload image</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Example images</a></li>
+                <li><a href="#">Upload image</a></li>
+                <li><a href="/regression">Regression</a></li>
+                <li><a href="/languagemodel">Language Model</a></li>
+                <li><a href="/documentation">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="uploadForm" class="upload-container">
+            <h2>Upload your image</h2>
+            <br>
+            <form enctype="multipart/form-data" action="/upload" method="post" id="uploadImageForm" class="upload-form">
+                <input type="file" name="file" accept="image/*" required id="fileInput" style="display: none;">
+                <label for="fileInput" class="custom-file-input">Browse</label>
+                <br><br>
+
+            </form>
+        </div>
+        <div id="uploadedImage" style="display: none; text-align: center;">
+            <h2>Uploaded image</h2>
+            <img id="imagePreview" src="" alt="Uploaded image"><br>
+            <button id="analyzeButton">Classify</button>
+            <p id="analysisResult" class="analysis-result"></p>
+        </div>
+    </main>
+    <script src="/scripts/upload.js"></script>
+    <script src="/scripts/classify.js"></script>
+</body>
+
+</html>
