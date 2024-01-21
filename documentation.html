@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Example images</a></li>
+                <li><a href="/upload">Upload image</a></li>
+                <li><a href="/regression">Regression</a></li>
+                <li><a href="/languagemodel">Language Model</a></li>
+                <li><a href="#">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="documentationContent">
+            <h2>Documentation</h2>
+            <div class="any-content">
+                <ul>
+                    <li>
+                        <h3>Interaction</h3>
+                        <b>Image classification </b>
+                        <p>Upon launching the application in <b>Example images</b> tab, the ml5 model is loaded, setting
+                            the stage for user interaction. You'll find six initial images displayed,
+                            serving as practical examples. Each of these images can be easily classified
+                            by clicking the "CLASSIFY" button.</p>
+                        <p></p>Following the classification process, users receive clear details about the
+                        top match and its confidence level, providing valuable insights into the system's analysis.</p>
+                        <p>For a more tailored experience, users can opt to upload their own images in <b>Upload
+                                image</b> tab by clicking
+                            the "Upload image" option in the top bar. After uploading and classifying the image,
+                            the system once again provides information about the best match and its confidence level,
+                            ensuring a personalized and informative user journey.</p>
+                        <b>Model training </b>
+                        <p>The <b>Regression</b> tab provides functionality for training the model with the option to
+                            select
+                            various parameters. The results are displayed on the corresponding graph, and there is also
+                            the possibility to upload a pre-trained model.</p>
+                        <b>Language Model</b>
+                        <p>Parameters, such as model type and the number of generated predictions, can be configured at
+                            the top. You can write seamlessly in the input field, and predictions will be generated upon
+                            clicking the "space" button. Word predictions are presented in the lower area and can be
+                            accepted by clicking on them.</p>
+
+
+
+
+
+
+                    </li>
+                    <li>
+                        <h3>Frameworks</h3>
+                        <p><b>Multer</b> Multer is middleware for Express.js, specializing in handling file uploads in
+                            web
+                            applications. With Multer, users can send files from client-side forms to the server and
+                            process
+                            them efficiently. It offers features such as file type validation and the ability to change
+                            file
+                            names. Multer simplifies secure file management on the server and seamlessly integrates into
+                            Express.js
+                            applications.</p>
+                        <p><b>Node.js</b> Node.js is a server-side JavaScript runtime environment based on the V8
+                            JavaScript engine from Google Chrome. It allows the development of high-performance and
+                            scalable network applications due to its non-blocking I/O architecture. Node.js is
+                            particularly
+                            suitable for data-intensive and real-time applications. Developers often utilize Node.js for
+                            creating web applications, APIs, and microservices.</p>
+                        <p><b>Express.js</b> Express.js is a lightweight and flexible web application framework for
+                            Node.js.
+                            It is based on simple routing and middleware concepts and provides a robust set of features
+                            for
+                            developing web and mobile applications. Its modular architecture enables developers to
+                            quickly
+                            create APIs and RESTful services. The framework also supports a variety of plugins that
+                            facilitate
+                            the development of Node.js applications.</p>
+                        <p><b>TensorFlow.js</b> TensorFlow.js is an open-source JavaScript library developed by Google
+                            for training and deploying machine learning models in the browser and Node.js environments.
+                            It allows developers to build and train machine learning models directly in JavaScript,
+                            leveraging the capabilities of machine learning for tasks like image and text
+                            classification,
+                            natural language processing, and more. TensorFlow.js facilitates seamless integration of
+                            machine
+                            learning into web applications, enabling real-time inference and interaction with trained
+                            models
+                            without the need for server-side processing.</p>
+                        <p><b>Ml5.js</b> ml5.js is a JavaScript library for machine learning built on top of
+                            TensorFlow.js.
+                            It provides developers with easy access to machine learning algorithms without requiring
+                            extensive
+                            knowledge in the machine learning field. ml5.js offers pre-trained models for various tasks
+                            such as
+                            image recognition, text analysis, and speech generation. Developers can integrate these
+                            models directly
+                            into web applications or train and implement custom models. The library is frequently used
+                            in the
+                            development of interactive creative applications and experiments in the field of artificial
+                            intelligence.</p>
+                        <p><b>ApexCharts.js</b> ApexCharts.js is a modern JavaScript charting library that offers a wide
+                            range of customizable interactive charts. It provides developers with intuitive and
+                            feature-rich
+                            options for creating visually appealing charts and graphs for web applications.
+                            ApexCharts.js
+                            supports a variety of chart types, including line, bar, pie, area, and scatter charts. Its
+                            ease
+                            of use and extensive documentation make it a popular choice for developers seeking to
+                            visualize
+                            data effectively.
+                        </p>
+
+
+
+                    </li>
+                    <li>
+                        <h3>Language model implementation</h3>
+
+                        <p>The implementation process began with the selection of a suitable dataset. I chose the
+                            English novel "Oliver Twist" by Dickens. Based on this, I created a Python script that:</p>
+
+                        <p>
+                            1. Converts the entire text to lowercase<br>
+                            2. Places each new sentence on a new line<br>
+                            3. Removes all characters except alphabetic characters and spaces<br>
+                        </p>
+
+                        <p> As a result, a txt file was obtained with text where all words are in lowercase, separated
+                            by spaces, and sentences are separated by line breaks.</p>
+
+                        <p> After this preprocessing, I proceeded to develop my models. I wrote a Python script to
+                            create a tokenizer in JSON format based on the aforementioned txt file.</p>
+
+                        <p> Next, scripts were written by me to create and train two models (RNN and FFNN) on the txt
+                            file; they were trained for 10 epochs.</p>
+
+                        <p> Since TensorFlow Decision Forest is not supported on Windows, scripts were written to
+                            convert the created models to tfjs and run in WSL.</p>
+
+                        <p> Then, I wrote a JS script for use in a new section. It loads two models and predicts the
+                            next word based on the entered text, considering the user-selected parameters: model type
+                            and the number of suggested words.</p>
+
+                        <p><b> Discussion of the results </b></p>
+
+                        <table style="width: 100%;">
+                            <tr style="text-align: center; font-weight: bold;">
+                                <td style="text-align: center;">TEXT</td>
+                                <td style="width: 100px;">RNN</td>
+                                <td style="width: 100px;">FFNN</td>
+                            </tr>
+                            <tr>
+                                <td>1. hätten sie ihm nichts als haferbrei gegeben so würde er nimmermehr so geworden
+                                    <b>sein</b>
+                                </td>
+                                <td style="text-align: center;">TOP 5</td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                            </tr>
+
+                            <tr>
+                                <td>2. ich muß weit fort von hier weiß nicht
+                                    <b>wohin</b>
+                                </td>
+                                <td style="text-align: center;">TOP 100</td>
+                                <td style="text-align: center;">TOP 10</td>
+                            </tr>
+
+                            <tr>
+                                <td>3. ich weiß wirklich nicht was ich glauben
+                                    <b>soll</b>
+                                </td>
+                                <td style="text-align: center;">TOP 100</td>
+                                <td style="text-align: center;">TOP 20</td>
+                            </tr>
+
+                            <tr>
+                                <td>4. also muß es ein geheimnis unter uns bleiben und schreib mir ja alles ich verlasse
+                                    mich auf
+                                    <b>dich</b>
+                                </td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                            </tr>
+
+                            <tr>
+                                <td>5. es fing eben an stark zu regnen und dies bestimmte
+                                    <b>ihn</b>
+                                </td>
+                                <td style="text-align: center;">TOP 5</td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                            </tr>
+
+                            <tr>
+                                <td>6. warum folgen sie mir
+                                    <b>nach</b>
+                                </td>
+                                <td style="text-align: center;">TOP 100</td>
+                                <td style="text-align: center;">TOP 100</td>
+                            </tr>
+
+                            <tr>
+                                <td>7. darf ich seinen namen
+                                    <b>wissen</b>
+                                </td>
+                                <td style="text-align: center;">TOP 100</td>
+                                <td style="text-align: center;"><label class="notop">> TOP 100</label></td>
+                            </tr>
+
+                            <tr>
+                                <td>8. diese nachricht macht mich
+                                    <b>glücklich</b>
+                                </td>
+                                <td style="text-align: center;">TOP 5</td>
+                                <td style="text-align: center;">TOP 5</td>
+                            </tr>
+
+                            <tr>
+                                <td>9. sie sind ein genie mein
+                                    <b>lieber</b>
+                                </td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                            </tr>
+
+                            <tr>
+                                <td>10. reden sie weiter wenn sie es nicht lassen
+                                    <b>können</b>
+                                </td>
+                                <td style="text-align: center;">TOP 5</td>
+                                <td style="text-align: center;">TOP 5</td>
+                            </tr>
+
+                            <tr>
+                                <td>11. wenn sie darauf bestehen will ich auch das
+                                    <b>tun</b>
+                                </td>
+                                <td style="text-align: center;">TOP 20</td>
+                                <td style="text-align: center;">TOP 100</td>
+                            </tr>
+
+                            <tr>
+                                <td>12.ich habe genug
+                                    <b>getan</b>
+                                </td>
+                                <td style="text-align: center;">TOP 10</td>
+                                <td style="text-align: center;">TOP 20</td>
+                            </tr>
+
+                            <tr>
+                                <td>13. sie baten nur um die erlaubnis sich zurückziehen zu
+                                    <b>dürfen</b>
+                                </td>
+                                <td style="text-align: center;"><label class="top1">TOP 1</label></td>
+                                <td style="text-align: center;">TOP 20</td>
+                            </tr>
+                        </table><br>
+
+                        <p><b>Average</b></p>
+                        <p>RNN - TOP 35<br>
+                        FFNN - TOP 30</p>
+
+                        <p>Post the trial runs, it was noted that there were no noteworthy variations in the performance
+                            of the RNN and FFNN models. Both models demonstrated comparable performance with regard to
+                            the assigned tasks and test datasets. It is important to highlight that outcomes might
+                            differ for diverse tasks or datasets, and further investigations are needed to ensure the
+                            generalizability of these findings.</p>
+
+                        <p>Deep learning language models pose a challenge to data privacy due to their reliance on
+                            extensive datasets. In my case, there is no inherent risk as the model was trained on
+                            classic literature. However, when training models on data containing personal information,
+                            applying meticulous anonymization and privacy-preserving technologies becomes crucial.
+                            Transparent communication, obtaining informed consent, and ongoing vigilance contribute to a
+                            privacy-centric approach.</p>
+                    </li>
+                    <li>
+                        <h3>Media sources</h3>
+                        <p>All images belong to <a href="https://unsplash.com">https://unsplash.com</a></p>
+                        <p>Book for model training: <a href="https://manybooks.net">https://manybooks.net</a></p>
+
+
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

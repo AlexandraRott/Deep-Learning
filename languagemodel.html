@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Model</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="scripts/wordpredict.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Example images</a></li>
+                <li><a href="/upload">Upload image</a></li>
+                <li><a href="/regression">Regression</a></li>
+                <li><a href="#">Language Model</a></li>
+                <li><a href="/documentation">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="languageModelForm" class="language-model-container">
+            <h2>Language Model</h2>
+            <!-- <input type="number" id="predCount" value="20" min="5" max="100" step="5"> -->
+
+            <label>Model type</label>
+            <select id="modType">
+                <option value="RNN">RNN</option>
+                <option value="FFNN">FFNN</option>
+            </select>
+
+            <label>Predicted words</label>
+            <select id="predCount">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="100">100</option>
+            </select><br><br>
+
+            <!-- <p>Input word and press space</p> -->
+            <input id="inputText" type="text" placeholder="Input word and press space"></input>
+            <div id="output" class="any-content"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>

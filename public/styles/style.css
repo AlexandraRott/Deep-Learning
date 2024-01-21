@@ -18,9 +18,18 @@ nav ul {
 }
 
 nav ul li {
+<<<<<<< HEAD
     display: flex; /* Делаем его флекс-контейнером */
     justify-content: center; /* Выравниваем элементы по горизонтали по центру */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
+=======
+    display: flex;
+    /* Делаем его флекс-контейнером */
+    justify-content: center;
+    /* Выравниваем элементы по горизонтали по центру */
+    align-items: center;
+    /* Выравниваем элементы по вертикали по центру */
+>>>>>>> final
     height: 100%;
 }
 
@@ -35,7 +44,11 @@ nav ul li a {
     align-items: center;
 }
 
+<<<<<<< HEAD
 nav li:hover{
+=======
+nav li:hover {
+>>>>>>> final
     background-color: rgb(91, 91, 91);
 }
 
@@ -48,6 +61,11 @@ main {
 
 /* Добавьте стили по вашему вкусу */
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> final
 .example-container {
     display: inline-block;
     flex-wrap: wrap;
@@ -57,7 +75,11 @@ main {
 }
 
 .example-image {
+<<<<<<< HEAD
     margin: 0 ;
+=======
+    margin: 0;
+>>>>>>> final
     position: relative;
     transition: opacity 0.3s;
     width: 300px;
@@ -106,7 +128,12 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+<<<<<<< HEAD
     border-radius: 8px; /* Закругление для кнопки "Classify" */
+=======
+    border-radius: 8px;
+    /* Закругление для кнопки "Classify" */
+>>>>>>> final
     font-size: 16px;
 }
 
@@ -114,8 +141,19 @@ button:hover {
     background-color: #0056a4;
 }
 
+<<<<<<< HEAD
 img {
     border-radius: 8px; /* Закругление для кнопки "Classify" */
+=======
+button:disabled {
+    background-color: #105ca3;
+    color: #cdcdcd;
+}
+
+img {
+    border-radius: 8px;
+    /* Закругление для кнопки "Classify" */
+>>>>>>> final
 }
 
 h2 {
@@ -136,7 +174,12 @@ input[type="file"] {
     padding: 17px 120px;
     cursor: pointer;
     transition: background-color 0.3s;
+<<<<<<< HEAD
     border-radius: 8px; /* Закругление для кнопки "Classify" */
+=======
+    border-radius: 8px;
+    /* Закругление для кнопки "Classify" */
+>>>>>>> final
 }
 
 .custom-file-input:hover {
@@ -145,9 +188,18 @@ input[type="file"] {
 
 .row-container {
     width: 100%;
+<<<<<<< HEAD
     display: flex; /* Делаем его флекс-контейнером */
     justify-content: center; /* Выравниваем элементы по горизонтали по центру */
     align-items: center; /* Выравниваем элементы по вертикали по центру */
+=======
+    display: flex;
+    /* Делаем его флекс-контейнером */
+    justify-content: center;
+    /* Выравниваем элементы по горизонтали по центру */
+    align-items: center;
+    /* Выравниваем элементы по вертикали по центру */
+>>>>>>> final
 }
 
 .flex-container {
@@ -155,12 +207,24 @@ input[type="file"] {
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
+<<<<<<< HEAD
+=======
+    padding-left: 15%;
+    padding-right: 15%;
+>>>>>>> final
 }
 
 .any-content {
     width: 100%;
+<<<<<<< HEAD
     display: flex; /* Делаем его флекс-контейнером */
     justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+=======
+    display: flex;
+    /* Делаем его флекс-контейнером */
+    justify-content: center;
+    /* Выравниваем элементы по горизонтали по центру */
+>>>>>>> final
     align-content: center;
 
 }
@@ -170,7 +234,10 @@ input[type="file"] {
     color: #000000;
     list-style: none;
     margin-top: 0;
+<<<<<<< HEAD
     padding-left: 50px;
+=======
+>>>>>>> final
     width: 100%;
     align-content: center;
 }
@@ -196,7 +263,12 @@ input[type="file"] {
     left: 0;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+=======
+    background: rgba(255, 255, 255, 0.8);
+    /* Полупрозрачный белый фон */
+>>>>>>> final
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,10 +278,19 @@ input[type="file"] {
 .result-content {
     text-align: center;
     padding: 20px;
+<<<<<<< HEAD
     border: 2px solid #0074d9; /* Цвет рамки */
     border-radius: 5px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+=======
+    border: 2px solid #0074d9;
+    /* Цвет рамки */
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Тень */
+>>>>>>> final
 }
 
 .result-content p {
@@ -222,19 +303,33 @@ input[type="file"] {
 
 
 /* Стили для контейнера графика и полей ввода */
+<<<<<<< HEAD
 .regression-content-container {
+=======
+.regression-container {
+>>>>>>> final
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 20px;
     display: flex;
+<<<<<<< HEAD
     align-items: center; /* Выравнивание элементов по вертикали */
 }
 
 .regression-chart {
+=======
+    align-items: center;
+    /* Выравнивание элементов по вертикали */
+}
+
+.regression-chart {
+    height: 140px;
+>>>>>>> final
     flex: 1;
 }
 
 .regression-inputs {
+<<<<<<< HEAD
     width: 200px;
     margin-left: 20px;
     display: flex;
@@ -246,12 +341,30 @@ input[type="file"] {
     width: 50px;
     margin-bottom: 10px; /* Отступ снизу между полями ввода */
 }
+=======
+    width: 100%;
+    height: 400px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+
+    /* Устанавливаем направление столбцом */
+}
+
+/* Стили для полей ввода */
+/*.regression-inputs input[type="number"] {
+    width: 50px;
+    margin-bottom: 10px;
+    /* Отступ снизу между полями ввода
+}*/
+>>>>>>> final
 
 /* Стили для кнопки */
 .regression-inputs button {
     background-color: #007BFF;
     color: #fff;
     border: none;
+<<<<<<< HEAD
     padding: 5px 10px;
     cursor: pointer;
 }
@@ -264,3 +377,99 @@ input {
     font-family: Helvetica;
 }
 
+=======
+    padding: 5px 5px;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.regression-inputs button:disabled {
+    background-color: #105ca3;
+    color: #cdcdcd;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+input {
+    border: 3px solid #0074d9;
+    /* Цвет рамки */
+    border-radius: 5px;
+    font-family: Helvetica;
+}
+
+select {
+    border: 3px solid #0074d9;
+    /* Цвет рамки */
+    border-radius: 5px;
+    font-family: Helvetica;
+}
+
+fieldset {
+    border: 3px solid #0074d9;
+    /* Цвет рамки */
+    border-radius: 5px;
+    font-family: Helvetica;
+    line-height: 1.4;
+
+}
+
+.all {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.fs {
+    width: 200px;
+    height: 85%;
+    margin-right: 50px;
+}
+
+.language-model-container {
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    height: 500px;
+
+}
+
+.language-model-container input {
+    width: 500px;
+    height: 30px;
+    
+}
+
+summary:hover {
+    
+    cursor: pointer;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-collapse: collapse;
+
+}
+
+tr {
+    height: 30px;
+}
+
+.top1 {
+    color: green;
+
+}
+
+.notop {
+    color: red;
+
+}
+>>>>>>> final
